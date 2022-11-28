@@ -12,20 +12,21 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# 1) Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# Secret Key
+# 2) SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-=d=3%%+4gyly$e_oc7c-jn4@kr*189z0_v5d9hupzzr55!ii9z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
+# If you set DEBUG = False, add your host in ALLOWED_HOST down below
+ALLOWED_HOSTS = ["localhost"]
 
 
 # Application definition
@@ -37,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Add your apps here:
+    'App1'
 ]
 
 MIDDLEWARE = [
@@ -76,6 +79,7 @@ WSGI_APPLICATION = 'Project1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
+        # Database Name goes here
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
