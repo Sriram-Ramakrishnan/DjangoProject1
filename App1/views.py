@@ -7,3 +7,6 @@ from django.http import HttpResponse
 # Sends a HTTP request
 def home(request):
     return render(request, 'App1/home.html', {'password': "Abc1235"})
+
+def password(request):
+    return render(request, 'App1/password.html', {'password': "Abc1235"})

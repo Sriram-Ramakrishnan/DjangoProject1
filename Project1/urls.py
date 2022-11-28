@@ -20,5 +20,6 @@ from App1 import views
 # URLS goes here:
 urlpatterns = [
     path('', views.home),
+    path('generated/',views.password)
 
 ]
